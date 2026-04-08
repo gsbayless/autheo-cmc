@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autheo — CMC Labs Application · April 2026</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Autheo — The Quantum-Native Blockchain OS">
+  <meta property="og:description" content="CoinMarketCap Labs Application · April 2026 · Securing the Future of Decentralized Computing">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Inter 400/700/900 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <script type="module" src="/src/main.ts"></script>
+
+  <!-- Print stylesheet -->
+  <style media="print">
+    /* Reset for print */
+    body {
+      background: #ffffff !important;
+      color: #111111 !important;
+      font-size: 11pt !important;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Hide decorative elements */
+    .orb,
+    .hero-overlay,
+    .hero-bg-img,
+    .hero-scroll-arrow,
+    .parallax-bg {
+      display: none !important;
+    }
+
+    /* Page breaks per section */
+    section {
+      page-break-after: always;
+      break-after: page;
+      padding: 24pt 0 !important;
+    }
+
+    footer {
+      page-break-after: avoid;
+    }
+
+    /* Override dark theme */
+    .section-label,
+    .teal,
+    .card-title,
+    .fundraise-type,
+    .team-role,
+    .phase-label,
+    .traction-card-title,
+    .seed-card-title,
+    .token-mechanics-title,
+    .validator-block-label,
+    .cmc-card-num,
+    .ip-moat-header,
+    .traction-banner-label,
+    .resource-heading,
+    .hero-eyebrow,
+    .hero-cmc-label {
+      color: #007A6E !important;
+    }
+
+    .hero-title,
+    .section-headline,
+    .team-name,
+    .phase-title,
+    .cmc-card-title,
+    .fundraise-price,
+    .stat-number,
+    .token-stat-big,
+    .traction-val,
+    .seed-amount,
+    .price-big,
+    .ip-stat-num,
+    .token-price {
+      color: #111111 !important;
+    }
+
+    .body-text,
+    .team-bio,
+    .phase-goal,
+    .fundraise-detail,
+    .traction-lbl,
+    .seed-type,
+    .seed-note-italic,
+    .ip-attorney,
+    .ip-domains,
+    .tokenomics-note,
+    .cmc-card-body,
+    .stat-label,
+    .eco-tag,
+    .token-stat-label,
+    .price-label,
+    .validator-block p,
+    .traction-banner-stat,
+    .resource-link-item a,
+    .footer-contact,
+    .footer-copy,
+    .hero-tagline,
+    .hero-subtitle {
+      color: #444444 !important;
+    }
+
+    /* Remove dark card backgrounds */
+    .dark-card,
+    .fundraise-card,
+    .stat-card,
+    .team-card,
+    .phase-card,
+    .traction-card,
+    .seed-card,
+    .token-stat-card,
+    .token-mechanics,
+    .validator-card,
+    .price-card,
+    .cmc-card,
+    .resource-card,
+    .ip-moat-card,
+    .traction-banner,
+    .no-vc-banner,
+    .token-strip {
+      background: #f7f7f7 !important;
+      border: 1px solid #cccccc !important;
+      box-shadow: none !important;
+    }
+
+    .cmc-card::before,
+    .phase-card::before {
+      background: #007A6E !important;
+    }
+
+    .gold-divider {
+      background: linear-gradient(90deg, transparent, #c8811a, transparent) !important;
+    }
+
+    .no-vc-banner {
+      color: #007A6E !important;
+    }
+
+    /* Links black for print */
+    a {
+      color: #111111 !important;
+      text-decoration: underline;
+    }
+
+    /* Eco tags */
+    .eco-tag {
+      border: 1px solid #aaaaaa !important;
+      background: #f0f0f0 !important;
+    }
+
+    /* Positioning quote */
+    .positioning-quote {
+      border-left: 3px solid #007A6E !important;
+      background: #f7f7f7 !important;
+    }
+
+    /* Orbs completely gone */
+    .orb-1, .orb-2, .orb-3, .orb-4 {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating glow orbs (CSS animated, behind everything) -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+  <div class="orb orb-4" aria-hidden="true"></div>
+
+  <!-- ===== 1. HERO ===== -->
+  <section class="hero" id="hero">
+    <img
+      src="https://autheo-investor-deck.vercel.app/assets/hero-main.png"
+      class="hero-bg-img"
+      alt=""
+      aria-hidden="true"
+    />
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <p class="hero-eyebrow">CoinMarketCap Labs Application &middot; April 2026</p>
+      <h1 class="hero-title">AUTHEO</h1>
+      <p class="hero-subtitle">The <span class="teal">Quantum-Native</span> Blockchain OS</p>
+      <div class="gold-divider"></div>
+      <p class="hero-tagline">Securing the Future of Decentralized Computing</p>
+      <p class="hero-cmc-label">autheo.com &middot; $THEO &middot; May 2026 Listing</p>
+    </div>
+    <div class="hero-scroll-arrow" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5v14m0 0l-5-5m5 5l5-5" stroke="rgba(0,229,204,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===== 2. WHAT WE DO ===== -->
+  <section class="section" id="what-we-do">
+    <div class="container">
+      <h3 class="section-label" data-reveal>What We Do</h3>
+      <p class="section-headline" data-reveal>The World's First Quantum-Native Blockchain Operating System.</p>
+      <p class="body-text" data-reveal>
+        Autheo is a Layer-0/1 hybrid Blockchain OS — a living, evolving platform that fuses post-quantum cryptography, hyper-scalability (500B+ TPS certified), AI-driven intelligence, and seamless interoperability to solve the fragmentation that plagues blockchains today. Not a Layer-1 competing for DeFi volume. An integrated coordination layer for developers, enterprises, and governments.
+      </p>
+
+      <!-- Three pillars -->
+      <div class="card-grid-3" data-stagger-grid>
+        <div class="dark-card" data-stagger>
+          <div class="card-title">Quantum-Native Security</div>
+          <ul class="card-body">
+            <li>PQCNet: post-quantum cryptographic tunnels (Dilithium, Kyber)</li>
+            <li>PrivacyNet: zero-knowledge data flows</li>
+            <li>ObfuscationNet: metadata shielding in real-time</li>
+            <li>Protects $1T+ in crypto from Shor's algorithm threats</li>
+          </ul>
+        </div>
+        <div class="dark-card" data-stagger>
+          <div class="card-title">Hyper-Scalable Architecture</div>
+          <ul class="card-body">
+            <li>QS-DAG consensus (Quantum-Secure DAG)</li>
+            <li>500B+ TPS — third-party certified</li>
+            <li>Scales to millions of nodes via DePIN</li>
+            <li>Crushes Ethereum fees, Solana outages, BNB centralization</li>
+          </ul>
+        </div>
+        <div class="dark-card" data-stagger>
+          <div class="card-title">Full-Stack Modular OS</div>
+          <ul class="card-body">
+            <li>Targets developers, enterprises, and governments simultaneously</li>
+            <li>SDKs + APIs for 100+ chain compatibility</li>
+            <li>Plug-and-play RPCnets — compose without forking core</li>
+            <li>Technical superiority + adoption focus = Dominance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Ecosystem tags -->
+      <div class="eco-tags" data-reveal>
+        <span class="eco-tag">PQCNet</span>
+        <span class="eco-tag">AutheoID</span>
+        <span class="eco-tag">Zer0veil</span>
+        <span class="eco-tag">DeFiNet</span>
+        <span class="eco-tag">DevHub</span>
+        <span class="eco-tag">THEO AI</span>
+        <span class="eco-tag">Aegis</span>
+        <span class="eco-tag">Valkra</span>
+        <span class="eco-tag">ABW34</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. TEAM ===== -->
+  <section class="section" id="team">
+    <div class="container">
+      <h3 class="section-label" data-reveal>Team</h3>
+      <p class="section-headline" data-reveal>Founders with 100s of Years of Combined Experience</p>
+
+      <!-- Team cards -->
+      <div class="team-grid">
+        <div class="team-card" data-reveal>
+          <div class="team-name">Scott Bayless</div>
+          <div class="team-role">Founder &amp; Managing Director</div>
+          <p class="team-bio">Serial entrepreneur, 20+ years across technology, venture, and blockchain. Built and scaled companies globally across multiple sectors.</p>
+        </div>
+        <div class="team-card" data-reveal>
+          <div class="team-name">Kenneth Harper</div>
+          <div class="team-role">Co-Founder, CTO</div>
+          <p class="team-bio">Architect of Autheo's quantum-native core — QS-DAG, PQCNet, 5D-QEH hypergraph. Expert in cryptography, post-quantum security, and distributed protocol design.</p>
+        </div>
+        <div class="team-card" data-reveal>
+          <div class="team-name">Todd</div>
+          <div class="team-role">Co-Founder</div>
+          <p class="team-bio">Deep background in enterprise infrastructure, distributed computing, and large-scale system architecture.</p>
+        </div>
+      </div>
+
+      <!-- Stat cards -->
+      <div class="stats-grid">
+        <div class="stat-card" data-reveal>
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Global Team Members</div>
+        </div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Countries</div>
+        </div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-number">$1M</div>
+          <div class="stat-label">Strategic Seed</div>
+        </div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-number">~5 yrs</div>
+          <div class="stat-label">Bootstrapped Development</div>
+        </div>
+      </div>
+
+      <!-- IP Moat Card -->
+      <div class="ip-moat-card" data-reveal>
+        <div class="ip-moat-header">IP Moat — Managed Through Legendary IP, LLC</div>
+        <div class="ip-stats-row">
+          <div class="ip-stat">
+            <div class="ip-stat-num">6</div>
+            <div class="ip-stat-lbl">Patent Families</div>
+          </div>
+          <div class="ip-stat">
+            <div class="ip-stat-num">400</div>
+            <div class="ip-stat-lbl">Embodiments</div>
+          </div>
+          <div class="ip-stat">
+            <div class="ip-stat-num">12</div>
+            <div class="ip-stat-lbl">Patent Domains</div>
+          </div>
+          <div class="ip-stat">
+            <div class="ip-stat-num">200-pg</div>
+            <div class="ip-stat-lbl">Provisional Spec</div>
+          </div>
+        </div>
+        <p class="ip-attorney">Lead patent attorney + 8-person dedicated IP team including former USPTO Examiner (30 years)</p>
+        <p class="ip-domains">
+          Post-Quantum Cryptography &middot; Privacy &amp; ZK Proofs &middot; Quantum Entanglement &middot; Decentralized Identity &middot; DeFi Primitives &middot; Hypergraph Ledger Architectures &middot; Distributed Infrastructure Orchestration &middot; Quantum-Secure Networking &middot; Key Management &middot; Mesh Networking &middot; Decentralized Storage &middot; AI Orchestration
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. ROADMAP ===== -->
+  <section class="section" id="roadmap">
+    <div class="container">
+      <h3 class="section-label" data-reveal>Roadmap</h3>
+      <p class="section-headline" data-reveal>From Living Testnet to Global Dominance</p>
+
+      <!-- Traction banner -->
+      <div class="traction-banner" data-reveal>
+        <span class="traction-banner-label">Traction to Date</span>
+        <span class="traction-banner-stat">300,000+ Wallets on Testnet</span>
+        <span class="traction-banner-sep">&middot;</span>
+        <span class="traction-banner-stat">60,000+ Smart Contracts Deployed</span>
+        <span class="traction-banner-sep">&middot;</span>
+        <span class="traction-banner-stat">DARPA / FOSOV Design Alignment</span>
+      </div>
+
+      <!-- Phase cards -->
+      <div class="phase-grid">
+        <div class="phase-card" data-reveal>
+          <div class="phase-label">Phase 1 — Short-Term</div>
+          <div class="phase-timeline">Q2–Q3 2026</div>
+          <div class="phase-title">Ecosystem Bootstrapping</div>
+          <ul class="key-points-list">
+            <li>Quantum-secure bridges (Ethereum, Solana, BNB Chain)</li>
+            <li>DeFiNet core primitives + developer SDKs live</li>
+            <li>$THEO token listing — Tier-1 CEX + Leading DEX</li>
+            <li>Zer0veil multi-chain wallet integration</li>
+            <li>Hybrid TradFi-DeFi gateways for institutional on-ramps</li>
+          </ul>
+          <div class="phase-goal">Goal: 1,000+ active devs · 500B TPS public demo</div>
+        </div>
+        <div class="phase-card" data-reveal>
+          <div class="phase-label">Phase 2 — Mid-Term</div>
+          <div class="phase-timeline">Q3 2026–Q1 2027</div>
+          <div class="phase-title">Enterprise Growth</div>
+          <ul class="key-points-list">
+            <li>Aegis Secure Communications Suite (quantum-encrypted messaging)</li>
+            <li>Bio-neural authentication + decentralized identity at scale</li>
+            <li>SCIF-style document viewers with zero-knowledge proofs</li>
+            <li>Compliance tooling + RWA tokenization pilots</li>
+            <li>Enterprise and government onboarding programs</li>
+          </ul>
+          <div class="phase-goal">Goal: 10 enterprise pilots · 10,000 active nodes</div>
+        </div>
+        <div class="phase-card" data-reveal>
+          <div class="phase-label">Phase 3 — Long-Term</div>
+          <div class="phase-timeline">2027+</div>
+          <div class="phase-title">Systemic Dominance</div>
+          <ul class="key-points-list">
+            <li>AI orchestration layer — THEO AI + Limpet agents across all chains</li>
+            <li>Eternal decentralized storage (ABW34) deployed at scale</li>
+            <li>Government-level digital infrastructure partnerships</li>
+            <li>Scale to 1M+ nodes globally</li>
+          </ul>
+          <div class="phase-goal">Goal: Top 10 blockchain by TVL · RWA dominance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. INVESTMENT ===== -->
+  <section class="section" id="investment">
+    <div class="container">
+      <h3 class="section-label" data-reveal>Investment</h3>
+      <p class="section-headline" data-reveal>Proof Before Capital. Traction Before VC.</p>
+      <p class="body-text" data-reveal>Autheo was bootstrapped from inception — built without outside capital until the product proved itself. $500K+ in validator node revenue in 90 days says more than any term sheet.</p>
+
+      <div class="investment-grid">
+        <!-- Left: Traction -->
+        <div class="traction-card" data-reveal>
+          <div class="traction-card-title">Traction</div>
+          <div class="traction-row">
+            <span class="traction-val">$500K+</span>
+            <span class="traction-lbl">Node Sale Revenue (90 days)</span>
+          </div>
+          <div class="traction-row">
+            <span class="traction-val">300,000+</span>
+            <span class="traction-lbl">Wallets on Testnet</span>
+          </div>
+          <div class="traction-row">
+            <span class="traction-val">60,000+</span>
+            <span class="traction-lbl">Smart Contracts Deployed</span>
+          </div>
+          <div class="traction-row">
+            <span class="traction-val">9,769+</span>
+            <span class="traction-lbl">Active Developers</span>
+          </div>
+          <div class="traction-row">
+            <span class="traction-val" style="font-size:14px; color:var(--teal);">DARPA / FOSOV</span>
+            <span class="traction-lbl">Design Alignment</span>
+          </div>
+        </div>
+
+        <!-- Right: Seed Round -->
+        <div class="seed-card" data-reveal>
+          <div class="seed-card-title">Seed Round</div>
+          <div class="seed-amount">$1M</div>
+          <div class="seed-type">Strategic Seed — Founder &amp; Insider Led</div>
+          <ul class="key-points-list">
+            <li>Deliberately founder-controlled — full speed, no committee delays</li>
+            <li>Funded by those who built alongside us and understand the technology</li>
+            <li>Revenue from node sales validates the model independently</li>
+            <li>Currently approaching institutional partners ahead of May listing</li>
+          </ul>
+          <p class="seed-note-italic">Node price increases $1,000 per 25 nodes sold — urgency is real.</p>
+        </div>
+      </div>
+
+      <div class="no-vc-banner" data-reveal>
+        "No VC — by design. The technology speaks first. Capital follows."
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. TOKENOMICS ===== -->
+  <section class="section" id="tokenomics">
+    <div class="container">
+      <h3 class="section-label" data-reveal>Tokenomics — $THEO</h3>
+      <p class="section-headline" data-reveal>$THEO: The Network's Native Utility Token</p>
+      <p class="body-text" data-reveal>$THEO is the native utility token of the Autheo network — 100% utility, zero governance allocation. Required for every transaction, computation, identity action, and infrastructure task. Demand is structurally tied to usage, not speculation.</p>
+
+      <!-- Top 3 stat cards -->
+      <div class="token-top-stats">
+        <div class="token-stat-card" data-reveal>
+          <div class="token-stat-big">100%</div>
+          <div class="token-stat-label">Utility Token · Zero Governance Allocation</div>
+        </div>
+        <div class="token-stat-card" data-reveal>
+          <div class="token-stat-big">Fixed Supply</div>
+          <div class="token-stat-label">Protocol-Defined Emissions · No Inflation</div>
+        </div>
+        <div class="token-stat-card" data-reveal>
+          <div class="token-stat-big">$0.08</div>
+          <div class="token-stat-label">Index Launch Price · Tier-1 CEX + DEX (May 2026)</div>
+        </div>
+      </div>
+
+      <!-- Two columns -->
+      <div class="token-columns">
+        <!-- Left: Token mechanics -->
+        <div class="token-mechanics" data-reveal>
+          <div class="token-mechanics-title">Token Mechanics</div>
+          <ul class="key-points-list">
+            <li>Required for all network operations: transactions, compute, identity, storage</li>
+            <li>Demand scales directly with network activity — not sentiment</li>
+            <li>Fixed supply — no arbitrary minting, ever</li>
+            <li>Protocol-defined emissions distributed across DePIN validators</li>
+          </ul>
+        </div>
+
+        <!-- Right: Validator emission model -->
+        <div class="validator-card" data-reveal>
+          <div class="validator-block">
+            <div class="validator-block-label">Validator Node Economics</div>
+            <p>~500 THEO / day per active validator</p>
+            <p>~15,000 THEO / month per validator</p>
+            <p>~1.3M THEO / node over a 7-year lifecycle</p>
+          </div>
+          <div class="validator-block">
+            <div class="validator-block-label">Emission Structure</div>
+            <p>No cliff unlocks — emissions are protocol-defined and time-distributed</p>
+            <p>Long-term alignment: validators incentivized for the full 7-year lifecycle</p>
+            <p>Emissions expand to cover compute, AI workloads, and storage as network grows</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Price context cards -->
+      <div class="price-cards">
+        <div class="price-card" data-reveal>
+          <div class="price-big">$0.01</div>
+          <div class="price-label">Private Round (current)</div>
+        </div>
+        <div class="price-card" data-reveal>
+          <div class="price-big">$0.04</div>
+          <div class="price-label">Public Presale (May 2026)</div>
+        </div>
+        <div class="price-card" data-reveal>
+          <div class="price-big">$0.08</div>
+          <div class="price-label">Index Launch Price (May 2026)</div>
+        </div>
+      </div>
+
+      <p class="tokenomics-note" data-reveal>
+        Full circulating supply, total supply, and FDV documentation available at mainnet — pre-TGE tokenomics published upon institutional inquiry.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 7. CMC LABS ===== -->
+  <section class="section" id="cmc-labs">
+    <div class="container">
+      <h3 class="section-label" data-reveal>CMC Labs — What We Need</h3>
+      <p class="section-headline" data-reveal>Accelerating Autheo at the Most Critical Moment</p>
+      <p class="cmc-subhead" data-reveal>
+        $THEO lists in <span>30–45 days</span>. CMC Labs puts us in front of <span>340M+ users</span> at exactly the right time.
+      </p>
+
+      <!-- 2x4 grid of service cards -->
+      <div class="cmc-grid" data-stagger-grid>
+        <div class="cmc-card" data-stagger>
+          <div class="cmc-card-num">01</div>
+          <div class="cmc-card-title">Learn &amp; Earn</div>
+          <p class="cmc-card-body">Educate $THEO holders before listing. Turn CMC's 340M users into informed community members who understand what they're buying.</p>
+        </div>
+        <div class="cmc-card" data-stagger>
+          <div class="cmc-card-num">02</div>
+          <div class="cmc-card-title">Airdrops</div>
+          <p class="cmc-card-body">Bootstrap CMC Watchlist adds and push notifications. Keep early holders informed and engaged through launch.</p>
+        </div>
+        <div class="cmc-card" data-stagger>
+          <div class="cmc-card-num">03</div>
+          <div class="cmc-card-title">Deep-Dive Content</div>
+          <p class="cmc-card-body">In-depth article + YouTube video covering Autheo's quantum-native tech, IP moat, and market positioning. SEO and YouTube visibility at listing.</p>
+        </div>
+        <div class="cmc-card" data-stagger>
+          <div class="cmc-card-num">04</div>
+          <div class="cmc-card-title">Infographic</div>
+          <p class="cmc-card-body">Visual breakdown of $THEO tokenomics and Autheo's architecture — shareable content for CMC's social channels at listing.</p>
+        </div>
+        <div class="cmc-card" data-stagger>
+          <div class="cmc-card-num">05</div>
+          <div class="cmc-card-title">Community Live</div>
+          <p class="cmc-card-body">Live AMA with Scott Bayless on CMC Community at token launch. Founder-level transparency builds trust with new holders.</p>
+        </div>
+        <div class="cmc-card" data-stagger>
+          <div class="cmc-card-num">06</div>
+          <div class="cmc-card-title">Amplification</div>
+          <p class="cmc-card-body">Coordinated awareness push across CMC channels at listing. Critical for healthy price discovery and early volume.</p>
+        </div>
+        <div class="cmc-card" data-stagger>
+          <div class="cmc-card-num">07</div>
+          <div class="cmc-card-title">Partner Intros</div>
+          <p class="cmc-card-body">Introductions to CMC's exchange network, fund partners, and ecosystem builders — essential for post-listing liquidity and growth.</p>
+        </div>
+        <div class="cmc-card" data-stagger>
+          <div class="cmc-card-num">08</div>
+          <div class="cmc-card-title">Whiteglove Service</div>
+          <p class="cmc-card-body">Direct line to the CMC team through launch. We move fast and need a responsive, strategic partner in our corner.</p>
+        </div>
+      </div>
+
+      <div class="cmc-contact-footer" data-reveal>
+        <a href="https://www.autheo.com" target="_blank" rel="noopener">autheo.com</a>
+        &nbsp;&middot;&nbsp;
+        <a href="mailto:scott@autheo.com">scott@autheo.com</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://x.com/Autheo_Network" target="_blank" rel="noopener">@AutheoNetwork</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. RESOURCES & LINKS ===== -->
+  <section class="section" id="resources">
+    <div class="container">
+      <h3 class="section-label" data-reveal>Resources &amp; Links</h3>
+      <p class="section-headline" data-reveal>Everything You Need to Evaluate Autheo</p>
+
+      <div class="resources-grid">
+        <!-- Network Metrics -->
+        <div class="resource-card" data-reveal>
+          <div class="resource-heading">Network Metrics</div>
+          <div class="resource-links">
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://testnet-explorer.autheo.com/" target="_blank" rel="noopener">Blockchain Explorer</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://testnet-explorer.autheo.com/verified-contracts" target="_blank" rel="noopener">Verified Smart Contracts</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://docs.autheo.com/" target="_blank" rel="noopener">Technical Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Investor Materials -->
+        <div class="resource-card" data-reveal>
+          <div class="resource-heading">Investor Materials</div>
+          <div class="resource-links">
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://www.autheo.com/" target="_blank" rel="noopener">Official Website</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://www.autheo.com/nodesale" target="_blank" rel="noopener">Validator Node Sale</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://autheo-investor-deck.vercel.app/" target="_blank" rel="noopener">Investor Deck</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://www.youtube.com/watch?v=D77vzV_shP0" target="_blank" rel="noopener">THEO Token Video</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://www.youtube.com/watch?v=mwLQD_tsWsI" target="_blank" rel="noopener">Node Sale Video</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leadership -->
+        <div class="resource-card" data-reveal>
+          <div class="resource-heading">Leadership</div>
+          <div class="resource-links">
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://www.autheo.com/team" target="_blank" rel="noopener">Autheo Team</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://zcal.co/schedule-call/launchlegends" target="_blank" rel="noopener">Schedule a Call</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="mailto:scott@autheo.com">scott@autheo.com</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social & Community -->
+        <div class="resource-card" data-reveal>
+          <div class="resource-heading">Social &amp; Community</div>
+          <div class="resource-links">
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://x.com/Autheo_Network" target="_blank" rel="noopener">X / Twitter</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://x.com/search?q=autheo" target="_blank" rel="noopener">Industry Sentiment</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://discord.com/invite/SDDETGfj4b" target="_blank" rel="noopener">Discord</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://www.linkedin.com/company/103325840/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Companies -->
+        <div class="resource-card" data-reveal>
+          <div class="resource-heading">Related Companies</div>
+          <div class="resource-links">
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://launchlegends.io/" target="_blank" rel="noopener">Launch Legends</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://valkra.ai/" target="_blank" rel="noopener">Valkra AI</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://opticsmint.com/" target="_blank" rel="noopener">Optics Mint</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://autheo-foundation-todds-projects-8c0ba261.vercel.app/" target="_blank" rel="noopener">Autheo Foundation</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Purchase & Node Sale -->
+        <div class="resource-card" data-reveal>
+          <div class="resource-heading">Purchase &amp; Node Sale</div>
+          <div class="resource-links">
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://commerce.autheo.com/" target="_blank" rel="noopener">Buy a Validator Node</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://www.autheo.com/nodesale" target="_blank" rel="noopener">Node Sale Page</a>
+            </div>
+            <div class="resource-link-item">
+              <span class="resource-link-dot"></span>
+              <a href="https://www.autheo.com/nodesale/emission-structure" target="_blank" rel="noopener">Emission Structure</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-contact" data-reveal>
+        <span>scott@autheo.com</span>
+        <span class="footer-sep">|</span>
+        <span>scott@launchlegends.io</span>
+      </div>
+      <div class="footer-links" data-reveal>
+        <a href="https://zcal.co/schedule-call/launchlegends" target="_blank" rel="noopener">Schedule a Call →</a>
+        <a href="https://autheo-investor-deck.vercel.app" target="_blank" rel="noopener">Autheo Deck →</a>
+        <a href="https://commerce.autheo.com" target="_blank" rel="noopener">Node Sale →</a>
+        <a href="https://www.autheo.com" target="_blank" rel="noopener">autheo.com →</a>
+      </div>
+      <div class="footer-copy" data-reveal>© 2026 Autheo. All rights reserved. · CoinMarketCap Labs Application</div>
+    </div>
+  </footer>
+
+</body>
+</html>
